@@ -5,7 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
-    <title>Vehicle Tax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@200;400;800&display=swap" rel="stylesheet" />
+    <title>सवारी साधन कर</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <header>
+        <h1>सवारी साधन कर</h1>
+        <p>
+          तलको फारम प्रयोग गरेर आफ्नो सवारी साधनको करको दर हेर्न सक्नुहुनेछ। आवश्यक सबै विवरण छान्नुहोस् र
+          <span class="btn">कर देखाउनुहोस्</span> भन्ने बटनमा क्लिक गर्नुहोस्।
+        </p>
+      </header>
+
+      <main>
+        <div class="form">
+          <form>
+            <label for="province">प्रदेशः </label>
+            <select id="province">
+              <option value="none">प्रदेश छान्नुहोस्</option>
+              <option value="province1">प्रदेश नं. १</option>
+            </select>
+
+            <label for="fiscalyear">आर्थिक वर्षः </label>
+            <select id="fiscalyear">
+              <option value="none">आ.व. छान्नुहोस्</option>
+              <option value="7980">२०७९/८०</option>
+              <option value="7879">२०७८/७९</option>
+            </select>
+
+            <label for="vehicle">सवारीको प्रकारः </label>
+            <select id="vehicle">
+              <option value="none">सवारीको प्रकार छान्नुहोस्</option>
+              <option value="bike">मोटरसाइकल/स्कुटर/मोपेड</option>
+              <option value="ebike">मोटरसाइकल/स्कुटर (विद्युतीय)</option>
+            </select>
+
+            <label for="cc">सवारीको सि.सि. </label>
+            <select id="cc">
+              <option value="none">सवारीको सि.सि. छान्नुहोस्</option>
+              <option value="1000">१००० सि.सि. सम्म</option>
+              <option value="1500">१००१ देखि १५०० सि.सि. सम्म</option>
+            </select>
+
+            <label for="category">सवारीको किसिमः </label>
+            <select id="category">
+              <option value="none">सवारीको किसिम छान्नुहोस्</option>
+              <option value="private">निजी</option>
+              <option value="public">सार्वजनिक</option>
+              <option value="government">सरकारी</option>
+              <option value="corporation">संस्थान</option>
+            </select>
+
+            <button id="search">कर देखाउनुहोस्</button>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          नोटः यहाँ दिइएको करको विवरण संघीय तथा प्रदेश आर्थिक ऐनहरू बमोजिम गणना गरिएको हो। तथापि आफ्नो सवारीको कर बुझाउन अघि एकपटक सम्बन्धित
+          कार्यालयमा एकिन गराउनु होला।
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
