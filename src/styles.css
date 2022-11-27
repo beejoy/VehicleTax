@@ -1,5 +1,91 @@
+/* RESET related styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  color: darkslategray;
+  font-family: "Noto Serif Devanagari", serif;
+}
+body {
+  background-image: url("../images/transportation.jpg");
+  background-size: cover;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.3em;
+}
+
+/* REGULAR styles */
+button {
+  width: max-content;
+  padding: 0.3em 0.75em;
+}
+
+footer {
+  background-color: rgba(0 0 0 / 0.6);
+  border-radius: 5px;
+  padding: 0.75em;
+}
+footer p {
+  color: white;
+  font-size: 0.9em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+form label {
+  font-weight: bold;
+}
+form > label ~ select {
+  margin-bottom: 1em;
+}
+
+header h1 {
+  text-align: center;
+}
+header img {
+  width: 80%;
+}
+header > * + * {
+  margin-top: 1em;
+}
+
+main {
+  background-color: rgba(239 239 239 / 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px rgba(0 0 0 / 0.5);
+  padding: 0.75em;
+}
+/* ID related styles */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  width: max(375px, 100%);
+}
+
+/* CLASS related styles */
+.btn {
+  /* color: gray; */
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media (480px < width) {
+  #app {
+    width: 480px;
+    margin: 0 auto;
+  }
 }
